@@ -1,0 +1,56 @@
+/* General container styling */
+.about-container {
+    padding: 40px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Limit max width */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center content */
+    animation: fadeInUp 0.6s ease-in-out forwards; /* Animation for entry */
+}
+
+/* Heading styling */
+.about-container h2 {
+    font-size: 2.5rem; /* Larger font for the title */
+    font-weight: bold; /* Bold heading */
+    color: #1e88e5; /* Blue color for heading */
+    margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1.5px; /* Add letter spacing */
+}
+
+/* Paragraph styling */
+.about-container p {
+    font-size: 1.2rem; /* Larger font for body text */
+    line-height: 1.8; /* Increase line height for readability */
+    color: #424242; /* Dark gray text color */
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Add subtle animation to the entire container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional media query for smaller screens */
+@media (max-width: 600px) {
+    .about-container {
+        padding: 20px; /* Adjust padding on small screens */
+    }
+
+    .about-container h2 {
+        font-size: 2rem; /* Smaller heading on small screens */
+    }
+
+    .about-container p {
+        font-size: 1rem; /* Adjust font size for small screens */
+    }
+}

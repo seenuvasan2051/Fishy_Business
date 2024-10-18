@@ -1,0 +1,53 @@
+.contact {
+    padding: 40px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Same gradient as other sections */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    max-width: 800px; /* Limit width */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center the content */
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e88e5;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-item {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #1e88e5;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item i:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #0056b3;
+}
+
+.contact-item span {
+    font-size: 1.2rem;
+    color: #333;
+}

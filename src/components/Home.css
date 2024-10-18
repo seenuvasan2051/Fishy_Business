@@ -1,0 +1,27 @@
+/* Home Styles */
+body, html {
+    height: 100%; /* Ensure the body takes full height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text */
+}
+
+h1 {
+    margin-top: 20px;
+    color: #333; /* Dark text color */
+}
+
+/* Image Styles */
+img {
+    max-width: 100%; /* Scale down to fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures there are no gaps below the image */
+    margin: 20px auto; /* Center the image and add margin */
+}

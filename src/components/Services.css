@@ -1,0 +1,90 @@
+/* General container styling */
+.services {
+    padding: 40px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Updated gradient to match About section */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
+    max-width: 900px; /* Limit max width */
+    margin: 0 auto; /* Center the container */
+    text-align: center; /* Center all content */
+    animation: fadeInUp 0.6s ease-in-out forwards; /* Animation on load */
+}
+
+/* Heading styles */
+.services h2 {
+    font-size: 2.5rem; /* Larger font for title */
+    font-weight: 700; /* Bold title */
+    color: #1e88e5; /* Blue color for title to match About section */
+    margin-bottom: 30px; /* Space below the title */
+    text-transform: uppercase; /* Uppercase styling */
+    letter-spacing: 2px; /* Add spacing between letters */
+}
+
+/* List styling */
+.service-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    display: grid; /* Grid layout for services */
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 20px; /* Space between items */
+}
+
+@media (min-width: 768px) {
+    .service-list {
+        grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+    }
+}
+
+/* Service items */
+.service-list li {
+    font-size: 1.3rem; /* Larger font size */
+    margin: 0 auto; /* Center the items */
+    padding: 25px; /* Add padding */
+    background-color: #ffffff; /* White background for service card */
+    border-radius: 12px; /* Rounded corners for service items */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add a shadow to service items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    position: relative; /* Enable pseudo-element positioning */
+    overflow: hidden; /* Prevent overflow for hover animations */
+}
+
+/* Service item hover effect */
+.service-list li:hover {
+    transform: translateY(-10px); /* Lift the item slightly */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Deepen shadow on hover */
+    background: #e3f2fd; /* Match hover background color with About section */
+}
+
+/* Icon and text styling */
+.service-list li::before {
+    content: '✨'; /* Add a decorative sparkle */
+    font-size: 2rem; /* Size of the icon */
+    position: absolute; /* Position it absolutely */
+    top: -15px; /* Move above the card */
+    right: -15px; /* Move to the right side */
+    color: #1e88e5; /* Blue color for the sparkle to match heading */
+    transform: rotate(45deg); /* Rotate for style */
+    transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.service-list li:hover::before {
+    transform: rotate(0deg) scale(1.2); /* Rotate and scale up on hover */
+}
+
+/* Strong text styling */
+.service-list strong {
+    color: #1e88e5; /* Highlight service titles with blue color */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Animation for the entire container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
