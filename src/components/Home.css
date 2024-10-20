@@ -2,6 +2,7 @@
 body, html {
     height: 100%; /* Ensure the body takes full height */
     margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Set a default font */
 }
 
 .container {
@@ -11,11 +12,13 @@ body, html {
     align-items: center; /* Center horizontally */
     height: 100vh; /* Full viewport height */
     text-align: center; /* Center text */
+    padding: 20px; /* Add padding for smaller devices */
 }
 
 h1 {
     margin-top: 20px;
     color: #333; /* Dark text color */
+    font-size: 2rem; /* Adjust font size for better readability */
 }
 
 /* Image Styles */
@@ -24,4 +27,25 @@ img {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures there are no gaps below the image */
     margin: 20px auto; /* Center the image and add margin */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for tablets */
+    }
+
+    .container {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .container {
+        padding: 10px; /* Further adjust padding for mobile */
+    }
 }

@@ -28,6 +28,19 @@
     margin-bottom: 20px; /* Space between paragraphs */
 }
 
+/* Optional link styling for any links within the container */
+.about-container a {
+    color: #1e88e5; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effect for links */
+.about-container a:hover {
+    color: #0d47a1; /* Darker blue on hover */
+}
+
 /* Add subtle animation to the entire container */
 @keyframes fadeInUp {
     from {

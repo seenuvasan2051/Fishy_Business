@@ -10,6 +10,7 @@ nav {
     z-index: 1000; /* Ensure it appears above other content */
 }
 
+/* Navbar Menu */
 .navbar-menu {
     list-style-type: none;
     display: flex;
@@ -27,7 +28,7 @@ nav {
     color: white; /* Text color for navbar links */
     text-decoration: none;
     font-size: 1.2rem; /* Slightly reduced font size */
-    padding: 0.5rem 1.5rem; /* Reduced padding for larger clickable area and consistency */
+    padding: 0.5rem 1.5rem; /* Reduced padding for larger clickable area */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
     border-radius: 5px; /* Slight rounded corners */
     display: flex; /* Use flexbox to align items */
@@ -92,6 +93,14 @@ nav {
     .navbar-menu {
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the left */
+        background-color: #0077cc; /* Keep navbar color */
+        padding: 1rem; /* Add padding for better spacing */
+        display: none; /* Initially hidden */
+    }
+
+    /* Show the menu when toggled */
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
     }
 
     .navbar-menu li {
@@ -102,5 +111,21 @@ nav {
     .dropdown {
         left: 0;
         right: auto;
+    }
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none; /* Hidden on large screens */
+    font-size: 2rem; /* Large size for better visibility */
+    cursor: pointer;
+    color: white;
+    background: none; /* No background */
+    border: none; /* No border */
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on mobile */
     }
 }

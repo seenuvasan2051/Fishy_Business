@@ -83,4 +83,23 @@
   .fish-gallery {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Smaller columns */
   }
+
+  .fish-card h3 {
+    font-size: 1rem; /* Adjust title size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .fish h2 {
+    font-size: 1.8rem; /* Slightly smaller heading for tablets */
+  }
+
+  .fish-card h3 {
+    font-size: 1.1rem; /* Adjust title size for tablets */
+  }
+
+  .view-details {
+    padding: 8px 12px; /* Adjust button padding for smaller screens */
+    font-size: 0.9rem; /* Smaller font size for buttons */
+  }
 }

@@ -51,3 +51,33 @@
     font-size: 1.2rem;
     color: #333;
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .contact h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .contact-item i {
+        margin-bottom: 10px; /* Space below icons for vertical alignment */
+    }
+
+    .contact-item span {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 30px; /* Slightly reduce padding for tablets */
+    }
+
+    .contact-item {
+        font-size: 1.3rem; /* Adjust font size for better readability */
+    }
+}

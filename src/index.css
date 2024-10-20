@@ -11,6 +11,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Global spacing adjustments for responsiveness */
+  --padding-large: 20px;
+  --padding-medium: 15px;
+  --padding-small: 10px;
 }
 
 a {
@@ -25,14 +30,19 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column; /* Stack content vertically for better layout */
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  padding: var(--padding-large);
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
+  margin: var(--padding-small) 0;
 }
 
 button {
@@ -54,6 +64,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Light theme adjustments */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,5 +75,46 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Responsive Adjustments for Tablets and Smaller Devices */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5em; /* Adjusted for smaller screens */
+  }
+
+  body {
+    padding: var(--padding-medium); /* Less padding on smaller screens */
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em; /* Slightly smaller buttons */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em; /* Further size reduction for mobile */
+  }
+
+  body {
+    padding: var(--padding-small); /* Reduced padding for mobile */
+  }
+
+  button {
+    padding: 0.4em 0.8em;
+    font-size: 0.85em; /* Buttons sized for small mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em; /* Smaller font for very small devices */
+  }
+
+  button {
+    padding: 0.4em; /* More compact button on small screens */
   }
 }

@@ -88,3 +88,32 @@
         transform: translateY(0);
     }
 }
+
+/* Media Queries for Small Screens (Phones) */
+@media (max-width: 600px) {
+    .services {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .services h2 {
+        font-size: 2rem; /* Smaller font size for heading on phones */
+        margin-bottom: 20px; /* Adjust margin below title */
+    }
+
+    .service-list li {
+        font-size: 1.1rem; /* Smaller font size for list items */
+        padding: 20px; /* Reduce padding for service cards */
+    }
+}
+
+/* Media Queries for Large Screens (Desktops) */
+@media (min-width: 1024px) {
+    .services {
+        padding: 50px; /* Add more padding for larger screens */
+    }
+
+    .service-list li {
+        font-size: 1.4rem; /* Larger font size for desktop */
+        padding: 30px; /* Add padding for desktop view */
+    }
+}

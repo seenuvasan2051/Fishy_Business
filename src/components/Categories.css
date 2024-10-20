@@ -47,6 +47,12 @@
     letter-spacing: 1px;
     display: block;
     padding: 10px 0;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Link hover effect */
+.categories-container ul li a:hover {
+    color: #004d40; /* Darker shade on hover */
 }
 
 /* Hover effects */
@@ -72,5 +78,12 @@
 @media (max-width: 600px) {
     .categories-container ul {
         grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .categories-container ul {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
     }
 }
