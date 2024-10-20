@@ -35,20 +35,10 @@ img {
   h1 {
     font-size: 1.5rem; /* Smaller font size for tablets */
   }
-
-  .container {
-    padding: 15px; /* Adjust padding for smaller screens */
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 480px) {
   h1 {
     font-size: 1.2rem; /* Smaller font size for mobile */
-  }
-
-  .container {
-    padding: 10px; /* Further adjust padding for mobile */
-    flex-direction: column;
   }
 }

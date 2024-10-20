@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../../styles/Navbar.css"; // Import Navbar styles
 
 export const Navbar = () => {
@@ -14,6 +14,10 @@ export const Navbar = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav>
       <button className="hamburger" onClick={toggleMenu}>
@@ -21,7 +25,9 @@ export const Navbar = () => {
       </button>
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" exact activeClassName="active" onClick={closeMenu}>
+            Home
+          </NavLink>
         </li>
         <li
           onMouseEnter={toggleDropdown}
@@ -32,28 +38,70 @@ export const Navbar = () => {
           {isDropdownOpen && (
             <ul className="dropdown">
               <li>
-                <Link to="/categories/fishes">Fishes</Link>
+                <NavLink
+                  to="/categories/fishes"
+                  activeClassName="active"
+                  onClick={closeMenu}
+                >
+                  Fishes
+                </NavLink>
               </li>
               <li>
-                <Link to="/categories/food">Food</Link>
+                <NavLink
+                  to="/categories/food"
+                  activeClassName="active"
+                  onClick={closeMenu}
+                >
+                  Food
+                </NavLink>
               </li>
               <li>
-                <Link to="/categories/accessories">Accessories</Link>
+                <NavLink
+                  to="/categories/accessories"
+                  activeClassName="active"
+                  onClick={closeMenu}
+                >
+                  Accessories
+                </NavLink>
               </li>
               <li>
-                <Link to="/categories/tanks">Tanks</Link>
+                <NavLink
+                  to="/categories/tanks"
+                  activeClassName="active"
+                  onClick={closeMenu}
+                >
+                  Tanks
+                </NavLink>
               </li>
             </ul>
           )}
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <NavLink
+            to="/services"
+            activeClassName="active-link"
+            onClick={closeMenu}
+          >
+            Services
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink
+            to="/about"
+            activeClassName="active-link"
+            onClick={closeMenu}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink
+            to="/contact"
+            activeClassName="active-link"
+            onClick={closeMenu}
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>
