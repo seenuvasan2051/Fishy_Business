@@ -1,0 +1,305 @@
+/* #region Utility Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.container-primary {
+  padding-top: 60px; /* Add space above the container */
+  padding-bottom: 20px;
+  background: linear-gradient(
+    135deg,
+    #e3f2fd,
+    #bbdefb
+  ); /* Updated gradient to match About section */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Larger shadow for depth */
+  max-width: 900px; /* Limit max width */
+  margin: 0 auto; /* Center the container */
+  text-align: center; /* Center all content */
+  animation: fadeInUp 0.6s ease-in-out forwards; /* Animation on load */
+}
+
+h2 {
+  font-size: 2.5rem; /* Larger font for title */
+  font-weight: 700; /* Bold title */
+  color: #1e88e5; /* Blue color for title to match About section */
+  margin-bottom: 30px; /* Space below the title */
+  text-transform: uppercase; /* Uppercase styling */
+  letter-spacing: 2px; /* Add spacing between letters */
+}
+
+.container-primary p {
+  font-size: 1.2rem; /* Larger font size for text */
+  color: #333; /* Dark text color */
+  margin-bottom: 30px; /* Space below the text */
+}
+
+/* #endregion Utility Styles */
+
+/* #region Components Styles */
+
+/* #region List styling */
+.list {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding */
+  display: grid; /* Grid layout for services */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px; /* Space between items */
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list li:hover {
+  transform: translateY(-10px); /* Lift the item slightly */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Deepen shadow on hover */
+  background: #e3f2fd; /* Match hover background color with About section */
+}
+
+.list li {
+  font-size: 1.3rem; /* Larger font size */
+  margin: 0 auto; /* Center the items */
+  padding: 25px; /* Add padding */
+  background-color: #ffffff; /* White background for service card */
+  border-radius: 12px; /* Rounded corners for service items */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add a shadow to service items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  position: relative; /* Enable pseudo-element positioning */
+  overflow: hidden; /* Prevent overflow for hover animations */
+}
+
+.list li::before {
+  content: "✨"; /* Example icon */
+  font-size: 2rem; /* Size of the icon */
+  position: absolute; /* Position it absolutely */
+  top: -15px; /* Move above the card */
+  right: -15px; /* Move to the right side */
+  color: #1e88e5; /* Blue color for the sparkle to match heading */
+  transform: rotate(45deg); /* Rotate for style */
+  transition: transform 0.3s ease; /* Smooth transform */
+}
+
+.list li:hover {
+  cursor: pointer;
+}
+
+.list li:hover::before {
+  transform: rotate(0deg) scale(1.2); /* Rotate and scale up on hover */
+}
+
+.list strong {
+  color: #1e88e5; /* Highlight service titles with blue color */
+  font-weight: bold; /* Make it bold */
+}
+
+/* #endregion List Styles */
+
+/* #region Card styles */
+.card-container {
+  padding: 40px;
+  background-color: #ddd; /* White background for the card */
+  border-radius: 15px; /* Rounded corners for the card */
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  animation: fadeInUp 0.6s ease-in-out; /* Animation */
+}
+
+/* Heading styling */
+.card-container h2 {
+  font-size: 2.5rem;
+  color: #00796b; /* Dark teal */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Add some spacing to the title */
+}
+
+/* List styling */
+.card-container ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between items */
+}
+
+/* Individual card item styling */
+.card-container ul li {
+  background-color: #f0f4f8; /* Soft background for each card item */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add shadow to items */
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Link styling */
+.card-container ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #00796b; /* Dark teal text color */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  padding: 10px 0;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Link hover effect */
+.card-container ul li a:hover {
+  color: #004d40; /* Darker shade on hover */
+}
+
+/* Hover effects */
+.card-container ul li:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Deepen shadow */
+  background-color: #e0f7fa; /* Slight background change */
+}
+
+.card-list {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners for the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding-top: 70px;
+}
+
+.card-gallery {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(250px, 1fr)
+  ); /* Responsive columns */
+  gap: 15px; /* Space between items */
+  padding: 20px; /* Padding around the gallery */
+}
+
+.card-card {
+  background-color: #fff; /* White background for each card */
+  border-radius: 10px; /* Rounded corners for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect for cards */
+  overflow: hidden; /* Clip child elements */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  animation: fadeIn 0.5s ease forwards; /* Fade-in effect for the card */
+}
+
+.card-img-container {
+  padding: 10px;
+  position: relative; /* Position relative for absolute positioning */
+  overflow: hidden; /* Clip image overflow */
+  height: 300px; /* Fixed height for image container */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img-container img {
+  border-radius: 10px;
+  height: 100% !important; /* Take full height of the container */
+  width: 100%;
+  object-fit: cover; /* Cover the container with image */
+  transition: transform 0.3s ease; /* Transition for image scaling */
+}
+
+.view-details {
+  font-weight: 600;
+  outline: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #1e88e5; /* Remove quotes */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.view-details:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Inset shadow on hover */
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+/* #endregion Card Styles */
+
+/* #endregion Components Styles */
+
+/* #region Animations */
+
+/* Animation for the entire container */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* #endregion Animations */
+
+/* #region Media Queries  */
+
+@media (max-width: 600px) {
+  .container-primary {
+    padding-top: 30px;
+    padding-inline: 30px;
+  }
+
+  .list {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .list li {
+    font-size: 1.1rem; /* Smaller font size for list items */
+    padding: 20px; /* Reduce padding for service cards */
+  }
+
+  .card-container ul {
+    grid-template-columns: 1fr; /* Single column layout for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    font-size: 1.4rem; /* Larger font size for desktop */
+    padding: 30px; /* Add padding for desktop view */
+  }
+
+  .card-container ul {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Three columns for larger screens */
+  }
+}
+
+/* #endregion Media Queries  */

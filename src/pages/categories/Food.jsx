@@ -1,7 +1,7 @@
 // import React from 'react';
-import "./Food.css"; // Ensure you have the CSS file for styles
+import { CardList } from "../../components";
 
-const Food = () => {
+export const Food = () => {
   // Sample food images with titles (replace these with your actual images and titles)
   const foodData = [
     { src: "/images/royalOscar.jpg", title: "Royal Oscar" },
@@ -14,20 +14,5 @@ const Food = () => {
     // Add more food images and titles as needed
   ];
 
-  return (
-    <div className="food">
-      <h2>Our Food</h2>
-      <div className="food-gallery">
-        {foodData.map((food, index) => (
-          <div className="food-card" key={index}>
-            <img src={food.src} alt={food.title} />
-            <h3>{food.title}</h3>
-            <button className="view-details">View Details</button>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+  return <CardList title="Our Food" data={foodData} />;
 };
-
-export default Food;

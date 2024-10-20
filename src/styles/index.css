@@ -1,0 +1,94 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff; /* Light blue background */
+  position: relative;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: #0077cc; /* Navbar background color */
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Center the image */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  /* For tablets */
+  nav ul {
+    flex-direction: column; /* Stack the navbar items vertically */
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For small tablets and large phones */
+  nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For phones */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 6px 0;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.2rem;
+  }
+}

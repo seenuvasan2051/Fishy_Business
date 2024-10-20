@@ -1,0 +1,60 @@
+.contact-card {
+  width: 700px;
+}
+
+.contact-item {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #1e88e5;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item i:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #0056b3;
+}
+
+.contact-item span {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .contact-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+  }
+
+  .contact-item i {
+    margin-bottom: 10px; /* Space below icons for vertical alignment */
+  }
+
+  .contact-item span {
+    font-size: 1rem; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-item {
+    font-size: 1.3rem; /* Adjust font size for better readability */
+  }
+}
